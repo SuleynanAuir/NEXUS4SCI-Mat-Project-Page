@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#ffffff" name="theme-color"/>
+<meta content="NEXUS4SCI-Mat: ontology-constrained, incrementally evolving knowledge graphs and evidence-grounded retrieval for ASC refractory materials. Patent Pending. Preview Release." name="description"/>
+<meta content="NEXUS4SCI-Mat: Evidence-Grounded Knowledge Graphs for Refractory Materials" property="og:title"/>
+<meta content="A research framework for condition-aware knowledge construction, adaptive retrieval, and verifiable materials-science reasoning." property="og:description"/>
+<meta content="website" property="og:type"/>
+<title>NEXUS4SCI-Mat | Knowledge Graphs for Refractory Materials</title>
+<link href="styles.css" rel="stylesheet"/>
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<main id="main">
+<header class="publication-header">
+<h1><span class="project-name">NEXUS4SCI-Mat</span><br/>Evidence-Grounded Knowledge Graphs<br/>for Refractory Materials</h1>
+<p class="contributors"><span class="contributor contributor-lead"><strong>Li Minghao</strong><sup><a aria-label="Primary contribution credit" href="#primary-contribution">*</a></sup></span><span class="contributor">Xin He</span><span class="contributor">Jiancheng An<sup><a aria-label="Project client affiliation" href="#industry-partner">†</a></sup></span><span class="contributor">Fuhai Li<sup><a aria-label="Project client affiliation" href="#industry-partner">†</a></sup></span><span class="contributor">Huaming Luo<sup><a aria-label="Project client affiliation" href="#industry-partner">†</a></sup></span><span class="contributor">Hao Zhang<sup><a aria-label="Project client affiliation" href="#industry-partner">†</a></sup></span><span class="contributor">Hongyuan Bai<sup><a aria-label="Project client affiliation" href="#industry-partner">†</a></sup></span></p>
+<p class="contribution-note" id="primary-contribution"><strong>* Primary contributor</strong> to this work and manuscript.</p>
+<p class="project-line">Project team · High-throughput ASC High-temperature Multiphase Materials Project</p><div aria-label="Institutional affiliations and project client" class="affiliations"><ul class="affiliation-row"><li><a class="affiliation" href="https://www.bnbu.edu.cn/"><span class="affiliation-logo"><img alt="Beijing Normal-Hong Kong Baptist University logo" height="447" src="assets/logos/bnbu.png" width="447"/></span><span class="affiliation-name">Beijing Normal-Hong Kong Baptist University,</span><span class="affiliation-location">Zhuhai, China</span></a></li><li><a class="affiliation" href="https://zgci.ac.cn/"><span class="affiliation-logo"><img alt="Zhongguancun Institute of Artificial Intelligence logo" height="225" src="assets/logos/zgci.png" width="225"/></span><span class="affiliation-name">Zhongguancun Institute of Artificial Intelligence,</span><span class="affiliation-location">Beijing, China</span></a></li><li><a class="affiliation" href="https://www.hkbu.edu.hk/"><span class="affiliation-logo"><img alt="Hong Kong Baptist University logo" height="472" src="assets/logos/hkbu.png" width="423"/></span><span class="affiliation-name">Hong Kong Baptist University,</span><span class="affiliation-location">Hong Kong, China</span></a></li><li><a class="affiliation" href="https://www.pku.edu.cn/"><span class="affiliation-logo"><img alt="Peking University logo" height="961" src="assets/logos/peking-university.png" width="960"/></span><span class="affiliation-name">Peking University,</span><span class="affiliation-location">Beijing, China</span></a></li><li id="industry-partner"><a class="affiliation" href="https://en.bjtd.com.cn/About/185.html"><span class="affiliation-logo"><img alt="BBMG (Jinyu Group) logo" height="540" src="assets/logos/jinyu.png" width="723"/></span><span class="affiliation-name">Beijing Jinyu Tongda Refractory Technologies Ltd.</span><span class="affiliation-location">Beijing, China</span></a></li></ul><p class="client-note">† Project client: Beijing Jinyu Tongda Refractory Technologies Ltd.</p></div>
+<p class="release">Patent Pending <span aria-hidden="true">·</span> Preview Release</p>
+<nav aria-label="Project resources" class="resource-links"><a href="#abstract">Overview</a>
+
+
+<a href="#method">Method</a>
+<a href="#results">Experiments</a>
+</nav>
+</header>
+<div class="teaser wide">
+<figure><a aria-label="Enlarge Framework overview" class="zoomable" data-caption="Framework overview. Original project framework from the README: literature ingestion, expert-calibrated graph construction, incremental specialization, evidence verification, and research feedback." href="assets/framework.png"><img alt="Framework overview" decoding="sync" height="5899" loading="eager" src="assets/framework.png" width="10528"/></a><figcaption><strong>Framework overview.</strong> Original project framework from the README: literature ingestion, expert-calibrated graph construction, incremental specialization, evidence verification, and research feedback.</figcaption></figure>
+<p class="teaser-summary"><strong>From materials literature to verifiable scientific reasoning.</strong> NEXUS4SCI-Mat links composition, processing, reactions, phases, microstructure, and performance in Al<sub>2</sub>O<sub>3</sub>–SiC–C (ASC) refractory materials.</p>
+</div>
+<section aria-labelledby="abstract-title" class="abstract-band" id="abstract">
+<div class="reading-width">
+<h2 id="abstract-title">Abstract</h2>
+<p>Scientific conclusions about refractory materials depend on experimental conditions and evidence distributed across papers, characterization results, and performance measurements. We present <strong>NEXUS4SCI-Mat</strong>, a domain-specific framework for knowledge graph construction and evidence-grounded retrieval in ASC materials research. An expert-defined ontology constrains entities and directed relations, while an immutable Base Graph and monotonic professional increments preserve established knowledge across versions. Relations retain experimental conditions and provenance rather than treating material interactions as unconditional facts. The proposed retrieval design combines material-aware query understanding, state- and budget-aware reasoning control, and complementary graph and community retrieval. Candidate evidence paths are checked for structural validity, condition compatibility, support, and conflict before answer synthesis. Multimodal discussion and expert feedback extend the research workflow, while separating candidate discoveries from authoritative knowledge. Repository evaluations examine knowledge augmentation, memory diagnostics, materials vision, and visual-evidence coverage.</p>
+</div>
+</section>
+<section aria-labelledby="method-title" class="reading-width method" id="method">
+<h2 id="method-title">Condition-Aware Knowledge &amp; Retrieval</h2>
+<p><strong>Preserve knowledge as it evolves.</strong> Ten entity types and ten relation types constrain extraction. Expert calibration fixes a reusable Base Graph; specialist literature contributes new knowledge through monotonic merges that preserve existing identifiers. A knowledge unit extends a triple to <span class="math">(h, r, t, c, p)</span>, where <span class="math">c</span> records temperature, duration, atmosphere, composition, specimen state, and test method, and <span class="math">p</span> records provenance. Proposed discoveries remain in a separate overlay until reviewed.</p>
+<p><strong>Retrieve evidence under scientific constraints.</strong> <abbr title="Material-Aware Structured Query Understanding">MASQ</abbr> resolves materials, processes, relation directions, conditions, and performance targets into a structured query. <abbr title="Adaptive Reasoning Guidance for Unified Search">ARGUS</abbr> uses query complexity, graph structure, evidence state, and remaining budget to guide retrieval depth and single-chain or branching reasoning. <abbr title="Ontology-constrained Multidimension Dual-channel Retrieval Mechanism">OCM-DRM</abbr> combines local graph paths with community-level evidence. Verification checks condition compatibility, path completeness, support, and conflict; answers distinguish source facts, grounded inference, and uncertainty.</p>
+<p class="method-note">Method terminology follows the supplied technical disclosure. The original README framework above labels the ontology-based retrieval component as OMD; the disclosure specifies the OCM-DRM design.</p>
+</section>
+<section aria-labelledby="results-title" class="wide results" id="results">
+<h2 id="results-title">Experimental Results</h2>
+<p class="results-intro">The README reports complementary evaluations rather than a single aggregate benchmark. The following results retain the scope of the August 11, 2026 research snapshot.</p>
+<div class="research-figures">
+<figure><a aria-label="Enlarge Knowledge augmentation" class="zoomable" data-caption="Knowledge augmentation. Original B0–B3 capability comparison, from a plain LLM through graph retrieval and hybrid RAG to full NEXUS CoD." href="assets/capability.png"><img alt="Knowledge augmentation" decoding="sync" height="6267" loading="lazy" src="assets/capability.png" width="9000"/></a><figcaption><strong>Knowledge augmentation.</strong> Original B0–B3 capability comparison, from a plain LLM through graph retrieval and hybrid RAG to full NEXUS CoD.</figcaption></figure>
+<figure><a aria-label="Enlarge Quality–efficiency trade-offs" class="zoomable" data-caption="Quality–efficiency trade-offs. Original comparison of quality, stability, latency, and cost across the same architectures." href="assets/efficiency.png"><img alt="Quality–efficiency trade-offs" decoding="sync" height="5880" loading="lazy" src="assets/efficiency.png" width="8400"/></a><figcaption><strong>Quality–efficiency trade-offs.</strong> Original comparison of quality, stability, latency, and cost across the same architectures.</figcaption></figure>
+</div>
+<div aria-label="Knowledge augmentation results" class="table-scroll" role="region" tabindex="0">
+<table>
+<caption>Knowledge augmentation: reported B0–B3 results</caption>
+<thead><tr><th scope="col">Architecture</th><th scope="col">Accuracy</th><th scope="col">Grounding</th><th scope="col">Citation recall</th><th scope="col">Latency (s)</th></tr></thead>
+<tbody>
+<tr><th scope="row">B0 · Plain LLM</th><td>0.0568</td><td>0.0095</td><td>0.0095</td><td>16.03</td></tr>
+<tr><th scope="row">B1 · GraphRAG</th><td>0.1318</td><td>0.5787</td><td>0.5009</td><td>30.03</td></tr>
+<tr><th scope="row">B2 · Hybrid RAG</th><td>0.5899</td><td>0.8746</td><td>0.7510</td><td>7.51</td></tr>
+<tr><th scope="row">B3 · NEXUS CoD</th><td><strong>0.6942</strong></td><td><strong>0.9574</strong></td><td><strong>0.9583</strong></td><td>46.74</td></tr>
+</tbody>
+</table>
+</div>
+<p class="experiment-note">Two questions × four architectures; boundary-regularized descriptive estimates. These results do not establish general performance or isolated causal effects.</p>
+<p class="results-summary"><strong>Memory and visual evidence.</strong> The persistent diagnostic profile scores 84.3764/100, a paired gain of +12.8355 points over the windowed profile (95% CI: +12.4905 to +13.1781); this is not a production-system memory score. The vision experiment measures response completeness, not expert-validated image accuracy. The separate 300-case Multi-Discussion run is a deterministic pipeline self-check. A full-build audit records 11,361 unique images and 39,028 KG relations; coverage alone does not establish correctness.</p>
+
+</section>
+</main>
+<footer>
+<p>NEXUS4SCI-Mat · Patent Pending · Preview Release</p>
+<p>All framework and experimental figures are reproduced unchanged from the project README. Click a figure to enlarge it.</p>
+<p>Layout inspired by <a href="https://horwitz.ai/probex">ProbeX</a> and the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template">Academic Project Page Template</a>.</p>
+</footer>
+<dialog aria-label="Full-size original research figure" id="figure-dialog"><button id="close-figure" type="button">Close ×</button><figure><img alt="" id="expanded-figure"/><figcaption id="expanded-caption"></figcaption></figure></dialog>
+</body>
+</html>
